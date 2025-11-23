@@ -7,7 +7,7 @@ name = "penpot-mcp"
 version = "1.0.0"
 description = "Model Context Protocol server for Penpot design platform"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.11"
 license = {text = "MIT"}
 authors = [
     {name = "Penpot MCP Contributors"}
@@ -18,6 +18,7 @@ classifiers = [
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
 ]
 
@@ -47,14 +48,14 @@ where = ["src"]
 
 [tool.black]
 line-length = 100
-target-version = ['py312']
+target-version = ['py311']
 
 [tool.ruff]
 line-length = 100
 target-version = "py312"
 
 [tool.mypy]
-python_version = "3.12"
+python_version = "3.11"
 strict = true
 warn_return_any = true
 warn_unused_configs = true
