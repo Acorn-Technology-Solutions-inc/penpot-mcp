@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "penpot": {
+      "command": "python",
+      "args": ["-m", "penpot_mcp"],
+      "env": {
+        "PENPOT_ACCESS_TOKEN": "your_access_token_here",
+        "PENPOT_API_URL": "https://design.penpot.app/api"
+      }
+    }
+  }
+}
