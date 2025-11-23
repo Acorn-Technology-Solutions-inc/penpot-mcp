@@ -20,8 +20,18 @@ A production-ready Model Context Protocol (MCP) server that enables AI assistant
 
 ### Installation
 
+### From PyPI (Recommended)
+
 ```bash
 pip install penpot-mcp
+```
+
+### From Source
+
+```bash
+git clone https://github.com/Acorn-Technology-Solutions-inc/penpot-mcp.git
+cd penpot-mcp
+pip install -e .
 ```
 
 ### Configuration
@@ -143,7 +153,7 @@ Add to your Cursor MCP configuration:
 
 ```bash
 # Clone repository
-git clone https://github.com/your-org/penpot-mcp.git
+git clone https://github.com/Acorn-Technology-Solutions-inc/penpot-mcp.git
 cd penpot-mcp
 
 # Create virtual environment
@@ -157,16 +167,38 @@ pip install -e ".[dev]"
 ### Running Tests
 
 ```bash
-pytest
-pytest --cov=penpot_mcp  # With coverage
+# Unit tests
+pytest -v
+
+# Functionality tests
+python test_functionality.py
+
+# With coverage
+pytest --cov=penpot_mcp
+
+# All tests
+python -m pytest && python test_functionality.py
 ```
 
 ### Code Quality
 
 ```bash
-black src/
-ruff check src/
-mypy src/
+black src/                # Format code
+ruff check src/           # Lint code
+mypy src/                 # Type check
+```
+
+### Building & Publishing
+
+See [docs/PUBLISHING.md](docs/PUBLISHING.md) for complete guide.
+
+**Quick build:**
+```bash
+# Build package
+python -m build
+
+# Upload to PyPI
+python -m twine upload dist/*
 ```
 
 ## Architecture
